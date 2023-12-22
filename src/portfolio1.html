@@ -8,170 +8,359 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;1,200;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="navbar">
-          <div>
-            <a href="#"><img src="Images/rsz_logo.png" alt="Logo" /></a>
-          </div>
-          <div>
-            <button><i class="fa-solid fa-bars"></i></button>
-          </div>
-          <div>
-            <ul>
-              <li><a href="index1.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li>
-                <a href="#">Portfolio</a>
-              </li>
-              <li><a href="skills1.html">Skills</a></li>
-              <li><a href="contact-me.html">Contact Me</a></li>
-            </ul>
+    <nav class="p-4">
+      <div class="container mx-auto">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <a class="text-white" href="#">
+            <img src="Images/rsz_logo.png" alt="Logo" class="h-8 w-auto" />
+          </a>
+
+          <!-- Mobile menu button -->
+          <button
+            class="text-white navbar-burger burger sm:hidden"
+            aria-label="menu"
+            aria-expanded="false"
+            id="mobile-menu-button"
+          >
+            <iconify-icon
+              icon="solar:hamburger-menu-linear"
+              style="color: #001858"
+              width="24"
+              height="24"
+            ></iconify-icon>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
+
+          <!-- Desktop menu -->
+          <div class="hidden sm:flex items-center space-x-4">
+            <a href="index1.html" class="text-[#001858] font-bold">Home</a>
+            <a href="about.html" class="text-[#001858] font-bold">About</a>
+            <a href="portfolio1.html" class="text-[#001858] font-bold"
+              >Portfolio</a
+            >
+            <a href="skills1.html" class="text-[#001858] font-bold">Skills</a>
+            <a href="contact-me.html" class="text-[#001858] font-bold"
+              >Contact Me</a
+            >
           </div>
         </div>
-      </nav>
-    </header>
 
-    <main>
-      <section>
-        <div>
-          <h2>Latest Portfolio</h2>
-          <div>
-            <p>
+        <!-- Mobile menu, show/hide based on button click -->
+        <div class="hidden sm:hidden" id="mobile-menu">
+          <div class="flex flex-col space-y-4">
+            <a href="index1.html" class="text-[#7b8ab3] font-bold">Home</a>
+            <a href="about.html" class="text-[#7b8ab3] font-bold">About</a>
+            <a href="portfolio1.html" class="text-[#7b8ab3] font-bold"
+              >Portfolio</a
+            >
+            <a href="skills1.html" class="text-[#7b8ab3] font-bold">Skills</a>
+            <a href="contact-me.html" class="text-[#7b8ab3] font-bold"
+              >Contact Me</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="main__portfolio">
+      <section class="portfolio">
+        <div class="container mx-auto pt-16">
+          <div class="flex flex-col items-center">
+            <h2 class="text-4xl font-bold mb-4">Latest Portfolio</h2>
+            <p class="text-lg text-center mb-8">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Excepturi, velit!
             </p>
           </div>
-        </div>
-        <div>
-          <ul>
-            <li>All Projects</li>
-            <li>UI/UX Design</li>
-            <li>Web Development</li>
-            <li>App Developement</li>
-          </ul>
-        </div>
 
-        <div>
-          <figure>
-            <img src="Images/cat_small.jpg" alt="Portfolio Details Photo" />
-          </figure>
-          <div>
-            <h3><a href="portfolio-details (1).html">Project 1</a></h3>
-          </div>
-          <div class="desc">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-          </div>
-        </div>
-        <div>
-          <figure>
-            <img src="Images/cat_small.jpg" alt="Portfolio Details Photo" />
-          </figure>
-          <div>
-            <h3><a href="portfolio-details (2).html">Project 2</a></h3>
-          </div>
-          <div class="desc">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-          </div>
-        </div>
-        <div>
-          <figure>
-            <img src="Images/cat_small.jpg" alt="Portfolio Details Photo" />
-          </figure>
-          <div>
-            <h3><a href="portfolio-details (3).html">Project 3</a></h3>
-          </div>
-          <div class="desc">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-          </div>
-        </div>
-        <div>
-          <figure>
-            <img src="Images/cat_small.jpg" alt="Portfolio Details Photo" />
-          </figure>
-          <div>
-            <h3><a href="portfolio-details (4).html">Project 4</a></h3>
-          </div>
-          <div class="desc">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+          <div class="flex flex-col items-center">
+            <div class="flex flex-col items-center">
+              <div class="m-2">
+                <button
+                  class="rounded-full bg-blue-50 hover:bg-[#3da9fc] hover:text-white transition duration-150 px-4 py-2"
+                >
+                  All Projects
+                </button>
+              </div>
+              <div class="m-2">
+                <button
+                  class="rounded-full bg-blue-50 px-4 py-2 hover:bg-[#3da9fc] hover:text-white transition duration-150"
+                >
+                  UI/UX Design
+                </button>
+              </div>
+              <div class="m-2">
+                <button
+                  class="rounded-full bg-blue-50 px-4 py-2 hover:bg-[#3da9fc] hover:text-white transition duration-150"
+                >
+                  Web Development
+                </button>
+              </div>
+              <div class="m-2">
+                <button
+                  class="rounded-full bg-blue-50 px-4 py-2 hover:bg-[#3da9fc] hover:text-white transition duration-150"
+                >
+                  App Development
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-        <div>
-          <figure>
-            <img src="Images/cat_small.jpg" alt="Portfolio Details Photo" />
-          </figure>
-          <div>
-            <h3><a href="portfolio-details (5).html">Project 5</a></h3>
-          </div>
-          <div class="desc">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
-          </div>
-        </div>
-        <div>
-          <figure>
-            <img src="Images/cat_small.jpg" alt="Portfolio Details Photo" />
-          </figure>
-          <div>
-            <h3><a href="portfolio-details (6).html">Project 6</a></h3>
-          </div>
-          <div class="desc">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+      </section>
+
+      <section class="bg-white">
+        <div class="container mx-auto py-16">
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-5"
+          >
+            <div class="card relative group">
+              <figure class="rounded-3xl">
+                <img
+                  src="Images/cat_small.jpg"
+                  alt="Project Image"
+                  class="rounded-3xl h-auto"
+                />
+              </figure>
+
+              <div
+                class="card-content absolute inset-0 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <div class="text-center text-white">
+                  <div>
+                    <p class="text-2xl">
+                      <a href="port-details1.html" class="">Project 1</a>
+                    </p>
+                  </div>
+                  <div class="content">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card relative group">
+              <figure class="rounded-3xl">
+                <img
+                  src="Images/cat_small.jpg"
+                  alt="Project Image"
+                  class="rounded-3xl h-auto"
+                />
+              </figure>
+
+              <div
+                class="card-content absolute inset-0 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <div class="text-center text-white">
+                  <div>
+                    <p class="text-2xl">
+                      <a href="port-details2.html" class="">Project 2</a>
+                    </p>
+                  </div>
+                  <div class="content">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card relative group">
+              <figure class="rounded-3xl">
+                <img
+                  src="Images/cat_small.jpg"
+                  alt="Project Image"
+                  class="rounded-3xl h-auto"
+                />
+              </figure>
+
+              <div
+                class="card-content absolute inset-0 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <div class="text-center text-white">
+                  <div>
+                    <p class="text-2xl">
+                      <a href="port-details3.html" class="">Project 3</a>
+                    </p>
+                  </div>
+                  <div class="content">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card relative group">
+              <figure class="rounded-3xl">
+                <img
+                  src="Images/cat_small.jpg"
+                  alt="Project Image"
+                  class="rounded-3xl h-auto"
+                />
+              </figure>
+
+              <div
+                class="card-content absolute inset-0 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <div class="text-center text-white">
+                  <div>
+                    <p class="text-2xl">
+                      <a href="port-details4.html" class="">Project 4</a>
+                    </p>
+                  </div>
+                  <div class="content">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card relative group">
+              <figure class="rounded-3xl">
+                <img
+                  src="Images/cat_small.jpg"
+                  alt="Project Image"
+                  class="rounded-3xl h-auto"
+                />
+              </figure>
+
+              <div
+                class="card-content absolute inset-0 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <div class="text-center text-white">
+                  <div>
+                    <p class="text-2xl">
+                      <a href="port-details5.html" class="">Project 5</a>
+                    </p>
+                  </div>
+                  <div class="content">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card relative group">
+              <figure class="rounded-3xl">
+                <img
+                  src="Images/cat_small.jpg"
+                  alt="Project Image"
+                  class="rounded-3xl h-auto"
+                />
+              </figure>
+
+              <div
+                class="card-content absolute inset-0 flex flex-col justify-center opacity-0 group-hover:opacity-100 transition duration-300"
+              >
+                <div class="text-center text-white">
+                  <div>
+                    <p class="text-2xl">
+                      <a href="port-details6.html" class="">Project 6</a>
+                    </p>
+                  </div>
+                  <div class="content">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer Area -->
-    <footer>
-      <div>
-        <a href="#">Logo</a>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
-          saepe?
-        </p>
-        <ul>
-          <li>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-brands fa-telegram"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h2>Useful Links</h2>
-        <ul>
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
-          <li><a href="#">Link 4</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2>Contact Info</h2>
-        <address>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi,
-            sint?
-          </p>
-          <ul>
-            <li>Tel: +251989971680</li>
-            <li>Email: simon.dereje@aait.edu.et</li>
-          </ul>
-        </address>
-      </div>
-      <div>
-        <p>Copyright. Lorem, ipsum dolor.</p>
-        <p>Copyright. Lorem, ipsum dolor.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+      <div class="container mx-auto">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 md:justify-items-center md:px-0 gap-8 py-8 px-8"
+        >
+          <div>
+            <div class="flex mb-4">
+              <div class="mr-2">
+                <img
+                  class="logo w-32 h-16"
+                  src="Images/rsz_logo.png"
+                  alt="Logo"
+                />
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates, saepe?
+              </p>
+            </div>
+            <div class="flex justify-between">
+              <a href="#"
+                ><i class="fab fa-linkedin is-medium text-white scale-150"></i
+              ></a>
+              <a href="#"><i class="fab fa-github text-white scale-150"></i></a>
+              <a href="#"
+                ><i class="fab fa-telegram text-white scale-150"></i
+              ></a>
+              <a href="#"
+                ><i class="fab fa-instagram text-white scale-150"></i
+              ></a>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="text-xl font-bold mb-4">Useful Links</h2>
+            <ul>
+              <li><a href="#" class="text-gray-300">Home</a></li>
+              <li><a href="#" class="text-gray-300">About</a></li>
+              <li><a href="#" class="text-gray-300">Portfolio</a></li>
+              <li><a href="#" class="text-gray-300">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="text-xl font-bold mb-4">Contact Info</h2>
+            <p class="text-gray-300">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Excepturi, sint?
+            </p>
+            <ul class="text-gray-300">
+              <li>Tel: +251989971680</li>
+              <li>Email: simon.dereje@aait.edu.et</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex justify-between">
+          <div>
+            <p class="text-gray-300">Copyright 2023. All Rights Reserved</p>
+          </div>
+          <div>
+            <p class="text-gray-300">Powered by Simon</p>
+          </div>
+        </div>
       </div>
     </footer>
+
+    <script src="js/index.js"></script>
   </body>
 </html>

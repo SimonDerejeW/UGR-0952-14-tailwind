@@ -3,165 +3,292 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Me</title>
+    <title>Contact Page</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;1,200;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="navbar">
-          <div>
-            <a href="#"><img src="Images/rsz_logo.png" alt="Logo" /></a>
+    <nav class="p-4">
+      <div class="container mx-auto">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <a class="text-white" href="#">
+            <img src="Images/rsz_logo.png" alt="Logo" class="h-10 w-auto" />
+          </a>
+
+          <!-- Mobile menu button -->
+          <button
+            class="text-white navbar-burger burger sm:hidden"
+            aria-label="menu"
+            aria-expanded="false"
+            id="mobile-menu-button"
+          >
+            <iconify-icon
+              icon="solar:hamburger-menu-linear"
+              style="color: #001858"
+              width="24"
+              height="24"
+            ></iconify-icon>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
+
+          <!-- Desktop menu -->
+          <div class="hidden sm:flex items-center space-x-4">
+            <a href="home1.html" class="text-[#001858] font-bold">Home</a>
+            <a href="about.html" class="text-[#001858] font-bold">About</a>
+            <a href="portfolio1.html" class="text-[#001858] font-bold"
+              >Portfolio</a
+            >
+            <a href="skills1.html" class="text-[#001858] font-bold">Skills</a>
+            <a href="contact-me.html" class="text-[#001858] font-bold"
+              >Contact Me</a
+            >
           </div>
-          <div>
-            <button><i class="fa-solid fa-bars"></i></button>
+        </div>
+
+        <!-- Mobile menu, show/hide based on button click -->
+        <div class="hidden sm:hidden" id="mobile-menu">
+          <div class="flex flex-col space-y-4">
+            <a href="home1.html" class="text-[#7b8ab3] font-bold">Home</a>
+            <a href="about.html" class="text-[#7b8ab3] font-bold">About</a>
+            <a href="portfolio1.html" class="text-[#7b8ab3] font-bold"
+              >Portfolio</a
+            >
+            <a href="skills1.html" class="text-[#7b8ab3] font-bold">Skills</a>
+            <a href="contact-me.html" class="text-[#7b8ab3] font-bold"
+              >Contact Me</a
+            >
           </div>
+        </div>
+      </div>
+    </nav>
+    <main class="section contact-page">
+      <article class="grid grid-cols-1 md:grid-cols-2 gap-8 contact-context">
+        <!-- Introduction -->
+        <div class="intro-faq">
+          <div class="mt-5 mx-3">
+            <div class="mb-5">
+              <h3 class="text-2xl font-semibold text-center">
+                It all starts with a hello
+              </h3>
+            </div>
+            <div class="">
+              <p class="mb-4">Let's Work Together!</p>
+              <p class="mb-4">
+                To get started, please fill out the form below. I'll get back to
+                you ASAP.
+              </p>
+              <p class="mb-4">
+                Alternatively, you can contact me at
+                <a href="mailto:simondereje1@gmail.com"
+                  >simondereje1@gmail.com</a
+                >
+              </p>
+            </div>
+          </div>
+          <!-- FAQ -->
+          <div class="m-3">
+            <h4 class="text-xl font-semibold text-center">
+              Frequently Asked Questions
+            </h4>
+            <div class="my-3">
+              <p>Here are the most asked questions.</p>
+            </div>
+            <!--Accordion-->
+            <details open class="mb-4">
+              <summary class="bg-[#3da9fc] p-5 rounded-xl text-white">
+                How much does your services cost?
+              </summary>
+              <div class="faq__description content">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Ratione adipisci illum error, hic expedita numquam impedit
+                  explicabo vitae iure quae.
+                </p>
+              </div>
+            </details>
+            <details class="mb-4">
+              <summary class="bg-[#3da9fc] p-5 rounded-xl text-white">
+                How much does your services cost?
+              </summary>
+              <div class="faq__description">
+                <p>
+                  Consequuntur earum pariatur dolorem repellat temporibus
+                  ducimus sunt suscipit repudiandae cupiditate in accusantium
+                  recusandae tempora sint eligendi.
+                </p>
+              </div>
+            </details>
+            <details class="mb-4">
+              <summary class="bg-[#3da9fc] p-5 rounded-xl text-white">
+                How much does your services cost?
+              </summary>
+              <div class="faq__description">
+                <p>
+                  Tenetur, ex delectus, perferendis aperiam voluptatem
+                  consequuntur molestiae ratione rerum vitae ab modi, minus
+                  placeat quis dignissimos. Dolorem quaerat odit, iusto
+                  laboriosam possimus.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+        <!-- Contact Form -->
+        <div class="contact-form">
+          <div class="section">
+            <h4 class="text-2xl mb-2">Contact Form</h4>
+            <div class="grid grid-cols-1 m-4">
+              <div>
+                <form action="#" method="post">
+                  <div class="field mb-4">
+                    <label class="label" for="name">Name</label>
+                    <div
+                      class="w-11/12 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600"
+                    >
+                      <input
+                        class="input w-full border-0 bg-transparent py-1.5 pl-1"
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Your Name"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="field mb-4">
+                    <label class="label" for="email">Email Address</label>
+                    <div
+                      class="w-11/12 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600"
+                    >
+                      <input
+                        class="input input w-full focus:ring-0 border-0 bg-transparent py-1.5 pl-1"
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Your Email"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="field mb-4">
+                    <label class="label" for="moreInfo">More Information</label>
+                    <div
+                      class="w-11/12 rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 h-11/12"
+                    >
+                      <textarea
+                        class="textarea input w-full border-0 bg-transparent py-1.5 pl-1 h-fit"
+                        id="moreInfo"
+                        name="moreInfo"
+                        rows="4"
+                        placeholder="Write something..."
+                        required
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="control">
+                      <button
+                        class="button bg-primary text-white"
+                        type="submit"
+                      >
+                        Submit
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+      <div class="container mx-auto">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 md:justify-items-center md:px-0 gap-8 py-8 px-8"
+        >
           <div>
+            <div class="flex mb-4">
+              <div class="mr-2">
+                <img
+                  class="logo w-32 h-16"
+                  src="Images/rsz_logo.png"
+                  alt="Logo"
+                />
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates, saepe?
+              </p>
+            </div>
+            <div class="flex justify-between">
+              <a href="#"
+                ><i class="fab fa-linkedin is-medium text-white scale-150"></i
+              ></a>
+              <a href="#"><i class="fab fa-github text-white scale-150"></i></a>
+              <a href="#"
+                ><i class="fab fa-telegram text-white scale-150"></i
+              ></a>
+              <a href="#"
+                ><i class="fab fa-instagram text-white scale-150"></i
+              ></a>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="text-xl font-bold mb-4">Useful Links</h2>
             <ul>
-              <li><a href="index1.html">Home</a></li>
-              <li><a href="about.html">About</a></li>
-              <li>
-                <a href="portfolio1.html">Portfolio</a>
-              </li>
-              <li><a href="skills1.html">Skills</a></li>
-              <li><a href="contact-me.html">Contact Me</a></li>
+              <li><a href="#" class="text-gray-300">Home</a></li>
+              <li><a href="#" class="text-gray-300">About</a></li>
+              <li><a href="#" class="text-gray-300">Portfolio</a></li>
+              <li><a href="#" class="text-gray-300">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h2 class="text-xl font-bold mb-4">Contact Info</h2>
+            <p class="text-gray-300">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Excepturi, sint?
+            </p>
+            <ul class="text-gray-300">
+              <li>Tel: +251989971680</li>
+              <li>Email: simon.dereje@aait.edu.et</li>
             </ul>
           </div>
         </div>
-      </nav>
-    </header>
-    <div>
-      <div>
-        <div>
-          <h3>Let's Work Together</h3>
-        </div>
-        <div class="desc">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam atque
-            illum, voluptas neque ratione perferendis quasi iure maiores
-            reprehenderit enim.
-          </p>
-        </div>
-      </div>
-    </div>
 
-    <!-- FAQ's -->
-    <div>
-      <div>
-        <h4>Frequently Asked Questions</h4>
-      </div>
-      <div class="desc">
-        <p>Here are the most asked questions.</p>
-      </div>
-
-      <div>
-        <div>
+        <div class="flex justify-between">
           <div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur. Lorem ipsum, dolor sit
-              amet consectetur adipisicing elit. Impedit, fugit!
-            </p>
+            <p class="text-gray-300">Copyright 2023. All Rights Reserved</p>
           </div>
           <div>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus
-              quaerat praesentium quo at excepturi eaque!
-            </p>
+            <p class="text-gray-300">Powered by Simon</p>
           </div>
         </div>
-        <div>
-          <div>
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
-          </div>
-          <div>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus
-              quaerat praesentium quo at excepturi eaque!
-            </p>
-          </div>
-        </div>
-        <div>
-          <div>
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
-          </div>
-          <div>
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus
-              quaerat praesentium quo at excepturi eaque!
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Contact Form -->
-    <aside>
-      <form action="#" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Email Address:</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="moreInfo">More Information:</label>
-        <textarea id="moreInfo" name="moreInfo" rows="4" required></textarea>
-
-        <input type="submit" value="Submit" />
-      </form>
-    </aside>
-
-    <!-- Footer Area -->
-    <footer>
-      <div>
-        <a href="#">Logo</a>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
-          saepe?
-        </p>
-        <ul>
-          <li>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-brands fa-telegram"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h2>Useful Links</h2>
-        <ul>
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
-          <li><a href="#">Link 4</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2>Contact Info</h2>
-        <address>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi,
-            sint?
-          </p>
-          <ul>
-            <li>Tel: +251989971680</li>
-            <li>Email: simon.dereje@aait.edu.et</li>
-          </ul>
-        </address>
-      </div>
-      <div>
-        <p>Copyright. Lorem, ipsum dolor.</p>
-        <p>Copyright. Lorem, ipsum dolor.</p>
       </div>
     </footer>
+
+    <script src="js/index.js"></script>
   </body>
 </html>

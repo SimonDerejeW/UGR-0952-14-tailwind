@@ -8,122 +8,276 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;1,200;1,400&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   </head>
   <body>
-    <header>
-      <nav>
-        <div class="navbar">
-          <div>
-            <a href="#"><img src="Images/rsz_logo.png" alt="Logo" /></a>
+    <nav class="p-4">
+      <div class="container mx-auto">
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <a class="text-white" href="#">
+            <img src="Images/rsz_logo.png" alt="Logo" class="h-8 w-auto" />
+          </a>
+
+          <!-- Mobile menu button -->
+          <button
+            class="text-white navbar-burger burger sm:hidden"
+            aria-label="menu"
+            aria-expanded="false"
+            id="mobile-menu-button"
+          >
+            <iconify-icon
+              icon="solar:hamburger-menu-linear"
+              style="color: #001858"
+              width="24"
+              height="24"
+            ></iconify-icon>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
+
+          <!-- Desktop menu -->
+          <div class="hidden sm:flex items-center space-x-4">
+            <a href="index1.html" class="text-[#001858] font-bold">Home</a>
+            <a href="about.html" class="text-[#001858] font-bold">About</a>
+            <a href="portfolio1.html" class="text-[#001858] font-bold"
+              >Portfolio</a
+            >
+            <a href="skills1.html" class="text-[#001858] font-bold">Skills</a>
+            <a href="contact-me.html" class="text-[#001858] font-bold"
+              >Contact Me</a
+            >
+          </div>
+        </div>
+
+        <!-- Mobile menu, show/hide based on button click -->
+        <div class="hidden sm:hidden" id="mobile-menu">
+          <div class="flex flex-col space-y-4">
+            <a href="index1.html" class="text-[#7b8ab3] font-bold">Home</a>
+            <a href="about.html" class="text-[#7b8ab3] font-bold">About</a>
+            <a href="portfolio1.html" class="text-[#7b8ab3] font-bold"
+              >Portfolio</a
+            >
+            <a href="skills1.html" class="text-[#7b8ab3] font-bold">Skills</a>
+            <a href="contact-me.html" class="text-[#7b8ab3] font-bold"
+              >Contact Me</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="text-black">
+      <div class="container mx-auto py-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="">
+            <figure class="md:w-3/4">
+              <video
+                class="w-full h-auto"
+                src="Images/timelapse.mp4"
+                controls
+                loop
+              ></video>
+            </figure>
           </div>
           <div>
-            <button><i class="fa-solid fa-bars"></i></button>
+            <div class="text-left">
+              <h2 class="text-3xl font-bold mb-4">About Me</h2>
+              <p class="mb-4 text-black">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea
+                dolorum vero, molestias doloremque atque dicta dignissimos ipsa,
+                reprehenderit error inventore voluptate recusandae quidem,
+                temporibus amet expedita repudiandae?
+              </p>
+              <p class="mb-4">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea
+                dolorum vero, molestias doloremque atque dicta dignissimos ipsa,
+                reprehenderit error inventore voluptate recusandae quidem,
+                temporibus amet expedita repudiandae?
+              </p>
+              <a href="#" class="rounded-full bg-blue-300 px-5 py-2.5">
+                <i class="fas fa-download"></i> Download Resume
+              </a>
+            </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="bg-white">
+      <div class="container mr-5 ml-5 py-16">
+        <h2 class="text-3xl font-bold mb-8">
+          My Education and Work Experience
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <ul>
-              <li><a href="index1.html">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li>
-                <a href="portfolio1.html">Portfolio</a>
+            <h3 class="text-2xl font-bold mb-4">Education</h3>
+            <ul class="list-none list-inside">
+              <li class="mb-4">
+                <div class="flex justify-between">
+                  <strong>Stanford University</strong>
+                  <span class="bg-red-600 text-white px-2 py-1 rounded-full"
+                    >2023</span
+                  >
+                </div>
+                Certificate in Machine Learning
               </li>
-              <li><a href="skills1.html">Skills</a></li>
-              <li><a href="contact-me.html">Contact Me</a></li>
+              <li class="mb-4">
+                <div class="flex justify-between">
+                  <strong>Stanford University</strong>
+                  <span class="bg-red-600 text-white px-2 py-1 rounded-full"
+                    >2023</span
+                  >
+                </div>
+                Certificate in Machine Learning
+              </li>
+              <li class="mb-4">
+                <div class="flex justify-between">
+                  <strong>Stanford University</strong>
+                  <span class="bg-red-600 text-white px-2 py-1 rounded-full"
+                    >2023</span
+                  >
+                </div>
+                Certificate in Machine Learning
+              </li>
+              <li class="mb-4">
+                <div class="flex justify-between">
+                  <strong>Stanford University</strong>
+                  <span class="bg-red-600 text-white px-2 py-1 rounded-full"
+                    >2023</span
+                  >
+                </div>
+                Certificate in Machine Learning
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Work Experience</h3>
+            <ul class="list-none list-inside">
+              <li class="mb-4">
+                <div class="flex justify-between">
+                  <strong>Company XYZ</strong>
+                  <span class="bg-red-600 text-white px-2 py-1 rounded-full"
+                    >2023</span
+                  >
+                </div>
+                Position: Software Engineer
+              </li>
+              <li class="mb-4">
+                <div class="flex justify-between">
+                  <strong>Company XYZ</strong>
+                  <span class="bg-red-600 text-white px-2 py-1 rounded-full"
+                    >2023</span
+                  >
+                </div>
+                Position: Software Engineer
+              </li>
+              <li class="mb-4">
+                <div class="flex justify-between">
+                  <strong>Company XYZ</strong>
+                  <span class="bg-red-600 text-white px-2 py-1 rounded-full"
+                    >2023</span
+                  >
+                </div>
+                Position: Software Engineer
+              </li>
+              <li class="mb-4">
+                <div class="flex justify-between">
+                  <strong>Company XYZ</strong>
+                  <span class="bg-red-600 text-white px-2 py-1 rounded-full"
+                    >2023</span
+                  >
+                </div>
+                Position: Software Engineer
+              </li>
             </ul>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </section>
 
-    <main>
-      <div>
-        <video src="Images/timelapse.mp4" controls loop>Hills</video>
-        <h2>Lorem, ipsum dolor</h2>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea dolorum
-          vero, molestias doloremque atque dicta dignissimos ipsa, reprehenderit
-          error inventore voluptate recusandae quidem, temporibus amet expedita
-          repudiandae? Repudiandae odio ut neque minima nulla perspiciatis
-          similique est! Molestiae deleniti sint debitis.
-        </p>
-        <a href="#" download="#"> Download Resume </a>
-
-        <!--Education and Experience-->
-        <section>
-          <h2>My Education and Work Experience</h2>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+      <div class="container mx-auto">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 md:justify-items-center md:px-0 gap-8 py-8 px-8"
+        >
           <div>
-            <h3>Education</h3>
-            <div>
-              <ul>
-                <li>Lorem ipsum dolor sit</li>
-                <li>Lorem ipsum dolor sit</li>
-                <li>Lorem ipsum dolor sit</li>
-                <li>Lorem ipsum dolor sit</li>
-              </ul>
+            <div class="flex mb-4">
+              <div class="mr-2">
+                <img
+                  class="logo w-32 h-16"
+                  src="Images/rsz_logo.png"
+                  alt="Logo"
+                />
+              </div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptates, saepe?
+              </p>
+            </div>
+            <div class="flex justify-between">
+              <a href="#"
+                ><i class="fab fa-linkedin is-medium text-white scale-150"></i
+              ></a>
+              <a href="#"><i class="fab fa-github text-white scale-150"></i></a>
+              <a href="#"
+                ><i class="fab fa-telegram text-white scale-150"></i
+              ></a>
+              <a href="#"
+                ><i class="fab fa-instagram text-white scale-150"></i
+              ></a>
             </div>
           </div>
+
           <div>
-            <h3>Work Experience</h3>
-            <div>
-              <ul>
-                <li>Lorem ipsum dolor sit</li>
-                <li>Lorem ipsum dolor sit</li>
-                <li>Lorem ipsum dolor sit</li>
-                <li>Lorem ipsum dolor sit</li>
-              </ul>
-            </div>
+            <h2 class="text-xl font-bold mb-4">Useful Links</h2>
+            <ul>
+              <li><a href="#" class="text-gray-300">Home</a></li>
+              <li><a href="#" class="text-gray-300">About</a></li>
+              <li><a href="#" class="text-gray-300">Portfolio</a></li>
+              <li><a href="#" class="text-gray-300">Contact</a></li>
+            </ul>
           </div>
-        </section>
-      </div>
-    </main>
-    <!-- Footer Area -->
-    <footer>
-      <div>
-        <a href="#">Logo</a>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
-          saepe?
-        </p>
-        <ul>
-          <li>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-brands fa-telegram"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h2>Useful Links</h2>
-        <ul>
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
-          <li><a href="#">Link 4</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2>Contact Info</h2>
-        <address>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi,
-            sint?
-          </p>
-          <ul>
-            <li>Tel: +251989971680</li>
-            <li>Email: simon.dereje@aait.edu.et</li>
-          </ul>
-        </address>
-      </div>
-      <div>
-        <p>Copyright. Lorem, ipsum dolor.</p>
-        <p>Copyright. Lorem, ipsum dolor.</p>
+
+          <div>
+            <h2 class="text-xl font-bold mb-4">Contact Info</h2>
+            <p class="text-gray-300">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Excepturi, sint?
+            </p>
+            <ul class="text-gray-300">
+              <li>Tel: +251989971680</li>
+              <li>Email: simon.dereje@aait.edu.et</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="flex justify-between">
+          <div>
+            <p class="text-gray-300">Copyright 2023. All Rights Reserved</p>
+          </div>
+          <div>
+            <p class="text-gray-300">Powered by Simon</p>
+          </div>
+        </div>
       </div>
     </footer>
+
+    <script src="js/index.js"></script>
   </body>
 </html>
