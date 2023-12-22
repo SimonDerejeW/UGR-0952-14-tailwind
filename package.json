@@ -1,0 +1,14 @@
+{
+  "name": "ugr-0952-14",
+  "version": "1.0.0",
+  "description": "Name: Simon Dereje Woldearegay \r   ID:   UGR-0952-14",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  }
+}

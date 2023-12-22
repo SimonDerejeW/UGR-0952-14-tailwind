@@ -7,3 +7,9 @@ body {
 .service__card {
   background-color: rgba(193, 214, 247, 0.5);
 }
+
+.hero-page {
+  background-image: url(/src/Images/cat_small.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
