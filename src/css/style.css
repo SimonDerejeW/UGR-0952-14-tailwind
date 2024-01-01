@@ -9,7 +9,7 @@ body {
 }
 
 .hero-page {
-  background-image: url(/src/Images/cat_small.jpg);
+  background-image: url(../Images/cat_small.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
